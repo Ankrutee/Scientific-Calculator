@@ -1,0 +1,6 @@
+2023-11-06 23:27:24.313 [main] INFO  org.example.Main - Start of Execution
+2023-11-06 23:27:37.451 [main] INFO  org.example.Main - End of Execution
+2023-11-06 23:28:59.773 [main] INFO  org.example.Main - Start of Execution
+2023-11-06 23:29:12.353 [main] INFO  org.example.Main - Start op: Division
+2023-11-06 23:29:12.354 [main] INFO  org.example.Main - End op: Division
+2023-11-06 23:29:21.832 [main] INFO  org.example.Main - End of Execution
