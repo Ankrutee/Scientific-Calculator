@@ -1,22 +1,63 @@
 package org.example;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
+
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        // for (int i = 1; i <= 5; i++) {
+        while (true) {
+            System.out.println("Calculator Menu:");
+            System.out.println("1. Addition");
+            System.out.println("2. Subtraction");
+            System.out.println("3. Multiplication");
+            System.out.println("4. Division");
+            System.out.println("5. Exit");
 
-        //     // Press Shift+F9 to start debugging your code. We have set one breakpoint
-        //     // for you, but you can always add more by pressing Ctrl+F8.
-        //     System.out.println("i = " + i);
-        // }
+            System.out.print("Enter your choice: ");
+            int choice = scanner.nextInt();
+
+            if (choice == 5) {
+                break;
+            }
+
+            System.out.print("Enter the first number: ");
+            double num1 = scanner.nextDouble();
+
+            System.out.print("Enter the second number: ");
+            double num2 = scanner.nextDouble();
+
+            double result = 0.0;
+
+            switch (choice) {
+                case 1:
+                    result = num1 + num2;
+                    break;
+                case 2:
+                    result = num1 - num2;
+                    break;
+                case 3:
+                    result = num1 * num2;
+                    break;
+                case 4:
+                    if (num2 != 0) {
+                        result = num1 / num2;
+                    } else {
+                        System.out.println("Error: Division by zero!");
+                        continue;
+                    }
+                    break;
+                default:
+                    System.out.println("Invalid choice!");
+                    continue;
+            }
+
+            System.out.println("Result: " + result);
+        }
     }
 }
