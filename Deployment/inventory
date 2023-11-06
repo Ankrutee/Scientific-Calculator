@@ -1,6 +1,2 @@
 [localhost]
-<<<<<<< HEAD
 127.0.0.1 ansible_connection=local ansible_user= ankrutee
-=======
-127.0.0.1 ansible_connection=local ansible_user= ankrutee
->>>>>>> 5ccdbe680fb87193d5b41ddde1db682151be2234
